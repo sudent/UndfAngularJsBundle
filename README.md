@@ -178,8 +178,8 @@ Also, don´t hesitate sending a pull request to include your Angular module
 within the bundle catalogue, which can be done in only 2 steps:
 
     1. Add the JS files within the Resources/public/js folder
-    2. Edit the catalogue file (Resources/config/catalogue.yml). Make sure that
-The name you use for the module in the catalogue in exactly the same as in the
+    2. Edit the catalogue file (Resources/config/catalogue.yml).
+Make sure that the name you use for the module in the catalogue in exactly the same as in the
 module declaration in the JS file.
 
 
