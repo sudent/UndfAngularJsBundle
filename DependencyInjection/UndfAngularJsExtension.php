@@ -41,7 +41,7 @@ class UndfAngularJsExtension extends Extension
                 'novendors' => array(),
                 'default' => array(
                     'vendors' => array(
-                        'ngResources',
+                        'ngResource',
                         'ui',
                         'ui.bootstrap'
                     )
