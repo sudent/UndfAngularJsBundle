@@ -17,7 +17,7 @@
         "symfony/assetic-bundle":   "2.1.*"
     },
     "replace": {
-        "Undf/AngularJSBundle": "dev-master"
+        "undf/AngularJSBundle": "dev-master"
     },
     "autoload": {
         "psr-0": { "Undf\\AngularJSBundle" : "" }
