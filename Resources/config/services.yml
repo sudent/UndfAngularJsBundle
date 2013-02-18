@@ -1,0 +1,10 @@
+services:
+  undf.angular_js.config_manager:
+    class: Undf\AngularJsBundle\ConfigManager
+    arguments: ["%undf_angular_js.module_sets%"]
+
+  undf.angular_js.assetic.filter:
+    class: Undf\AngularJsBundle\Assetic\AngularJsFilter
+    tags:
+      - { name: assetic.filter, alias: angularjs }
+    arguments: ["@undf.angular_js.config_manager", "%undf_angular_js.catalogue%", "@kernel", "@assetic.parameter_bag"]

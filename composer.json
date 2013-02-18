@@ -1,0 +1,26 @@
+{
+    "name": "undf/angularjsbundle",
+    "type": "symfony-bundle",
+    "description": "Symfony2 bundle for AngularJs integration" ,
+    "keywords": ["angular.js", "symfony", "javascript"],
+    "homepage": "https://bitbucket.org/danidelalin/angularjsbundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dani Gonzalez",
+            "email": "danigonzalezgonzalez@gmail.com",
+            "homepage": "https://bitbucket.org/danidelalin/angularjsbundle"
+        }
+    ],
+    "require": {
+        "php":                      ">=5.3.1",
+        "symfony/assetic-bundle":   ">2.1.0"
+    },
+    "replace": {
+        "undf/AngularJSBundle": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "Undf\\AngularJSBundle" : "" }
+    },
+    "target-dir": "Undf/AngularJSBundle"
+}

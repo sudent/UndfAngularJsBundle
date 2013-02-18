@@ -1,0 +1,19 @@
+vendors:
+  angularjs:
+    description: 'AngularJS v1.0.4'
+    files: ['@UndfAngularJsBundle/Resources/public/js/angular-1.0.4/angular.js']
+  ngResource:
+    description: 'A factory which creates a resource object that lets you interact with [RESTful] server-side data sources.'
+    files: ['@UndfAngularJsBundle/Resources/public/js/angular-1.0.4/angular-resource.js']
+  ui:
+    description: 'AngularUI v0.3.2(2013-02-12) - The companion suite for AngularJS. [http://angular-ui.github.com/]'
+    files: ['@UndfAngularJsBundle/Resources/public/js/angular-ui-0.4.0/angular-ui.js']
+  ui.bootstrap:
+    description: 'UIBootstrap v0.1.0 - Bootstrap components written in pure AngularJS by the AngularUI Team. [http://angular-ui.github.com/bootstrap/]'
+    files:
+      - '@UndfAngularJsBundle/Resources/public/js/angular-ui-bootstrap-0.1.0/ui-bootstrap-0.1.0.js'
+      - '@UndfAngularJsBundle/Resources/public/js/angular-ui-bootstrap-0.1.0/ui-bootstrap-tpls-0.1.0.js'
+undf:
+  uFileUpload:
+    description: Image uploader with preview of the uploaded image
+    files: ['@UndfAngularJsBundle/Resources/public/js/undf/file_upload.js ']
