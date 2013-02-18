@@ -22,14 +22,12 @@ Installation
 
 Edit your composer.json and add this line in the "require" object
 ```
-"undf/angularjsbundle" :"dev-master"
-
+	"undf/angularjsbundle" :"dev-master"
 ```
 
 Enable the bundle in your AppKernel.php
 ```
-new Udf\AngularJSBundle\UdfAngularJSBundle()
-
+	new Udf\AngularJSBundle\UdfAngularJSBundle()
 ```
 
 
@@ -38,22 +36,23 @@ new Udf\AngularJSBundle\UdfAngularJSBundle()
 Usage
 =====
 
-- ##[1]. Take a look at the list of available modules:
-```
-php app/console undf:angularjs:catalogue
+#### - [1]. Take a look at the list of available modules:
 
 ```
+	php app/console undf:angularjs:catalogue
+```
 
 
 
-- ##[2]. Make your module selection
+####- [2]. Make your module selection
 
-    The bundle comes with 3 predefined sets of modules:
-        -novendors: It includes just the framework with no modules
-        -default: It includes all vendor modules from the catalogue
-        -all: It includes all available modules from the catalogue
+The bundle comes with 3 predefined sets of modules:
 
-    You can add your own module set by editing your config.yml file:
+- novendors: It includes just the framework with no modules.
+- default: It includes all vendor modules from the catalogue.
+- all: It includes all available modules from the catalogue.
+
+You can add your own module set by editing your config.yml file:
 ```
 undf_angular_js:
   module_sets:
@@ -63,7 +62,7 @@ undf_angular_js:
       undf: [uFileUpload, taggable]
 
 ```
-    You can also extend one of the predefined sets:
+You can also extend one of the predefined sets:
 ```
 undf_angular_js:
   module_sets:
@@ -74,7 +73,7 @@ undf_angular_js:
 
 
 
-- ##[3]. Generate the master document for every configured module set:
+####- [3]. Generate the master document for every configured module set:
 ```
 php app/console undf:angularjs:create-master-files @MyBundle/Resources/public/js
 
@@ -82,7 +81,7 @@ php app/console undf:angularjs:create-master-files @MyBundle/Resources/public/js
 
 
 
-- ##[4]. Include the master document corresponding to the module set you want to use in your templates:
+####- [4]. Include the master document corresponding to the module set you want to use in your templates:
 ```jinja
 {% javascripts
                 //...your other javascript files...
@@ -104,7 +103,7 @@ content will not go throw the chained filter.
 
 
 
-- ##[5]. Configure your angular application to use the generated module set:
+####- [5]. Configure your angular application to use the generated module set:
 Once the angularjs assets are dumped, a new angular module will be created at
 the end of the dumped file; this module will include all modules within your
 module set as module dependencies. However, this module will be useless untill
@@ -131,7 +130,7 @@ var app = angular.module('myangularapp', ['undfDefaultModule']);
 Using your own modules
 ======================
 
-- ##[1]. Extend the catalogue:
+####- [1]. Extend the catalogue:
 ```yaml
 undf_angular_js:
   catalogue:
@@ -152,7 +151,7 @@ have been added.
 
 
 
-- ##[2]. Add the new modules into a module set:
+####- [2]. Add the new modules into a module set:
 ```
 undf_angular_js:
   module_sets:
@@ -180,7 +179,7 @@ within the bundle catalogue, which can be done in only 2 steps:
 
     1. Add the JS files within the Resources/public/js folder
     2. Edit the catalogue file (Resources/config/catalogue.yml). Make sure that
-the name you use for the module in the catalogue in exactly the same as in the
+The name you use for the module in the catalogue in exactly the same as in the
 module declaration in the JS file.
 
 
