@@ -27,7 +27,7 @@ Edit your composer.json and add this line in the "require" object
 
 Enable the bundle in your AppKernel.php
 ```
-	new Udf\AngularJSBundle\UdfAngularJSBundle()
+	new Undf\AngularJsBundle\UndfAngularJsBundle()
 ```
 
 
