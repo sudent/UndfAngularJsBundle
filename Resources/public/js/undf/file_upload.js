@@ -10,12 +10,18 @@ angular.module('uFileUpload', []).directive('uFileUpload', function () {
 
                     reader.onload = function (e) {
                         $scope.$apply(function () {
+                            $scope[$attrs.uFileName] = e.timeStamp;
                             $scope[$attrs.uFileSrc] = e.target.result;
-                            $scope.form.$setDirty(true);
                         });
                     };
                     reader.readAsDataURL(input.files[0]);
                 }
+            };
+            $scope.uploadFile = function () {
+                $element.find('[type=file]').click();
+            };
+            $scope.removePic = function () {
+                $scope[$attrs.uFileSrc] = $scope[$attrs.uFileDefaultSrc];
             };
         },
         compile: function (element, attrs, transclude) {

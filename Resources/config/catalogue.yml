@@ -16,4 +16,4 @@ vendors:
 undf:
   uFileUpload:
     description: Image uploader with preview of the uploaded image
-    files: ['@UndfAngularJsBundle/Resources/public/js/undf/file_upload.js ']
+    files: ['@UndfAngularJsBundle/Resources/public/js/undf/file_upload.js']
