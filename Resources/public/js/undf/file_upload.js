@@ -21,6 +21,15 @@ angular.module('uFileUpload', []).directive('uFileUpload', function () {
                 $element.find('[type=file]').click();
             };
             $scope.removePic = function () {
+                //Clear the file input so the onchange event is still
+                //triggered when uploading same image twice in a row.
+                var clearInput = function (source) {
+                    var $form = angular.element('<form>'),
+                        $targ = source.clone().appendTo($form);
+                    $form[0].reset();
+                    source.replaceWith($targ);
+                };
+                clearInput($element.find('[type=file]'));
                 $scope[$attrs.uFileSrc] = $scope[$attrs.uFileDefaultSrc];
             };
         },
