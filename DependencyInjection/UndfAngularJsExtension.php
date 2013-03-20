@@ -53,7 +53,8 @@ class UndfAngularJsExtension extends Extension
             ),
             'catalogue' => $this->getDefaultCatalogue()
         );
-        $configs = array_merge_recursive($defaultConfig, $configs[0]);
+        $configs = array_merge($defaultConfig, $configs[0]);
+
         foreach ($configs['module_sets'] as $name => $set) {
             foreach ($set as $parent => $modules) {
                 if (!isset($configs['catalogue'][$parent])) {
