@@ -98,6 +98,9 @@ class AngularJsFilter implements \Assetic\Filter\FilterInterface
             } else {
                 $path = $this->kernel->locateResource($path);
             }
+        } else {
+            // Direct path to web
+            $path = $this->kernel->getRootDir() . '/../web/' . $path;
         }
         return $path;
     }
