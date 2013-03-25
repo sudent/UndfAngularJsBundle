@@ -17,3 +17,7 @@ undf:
   uFileUpload:
     description: Image uploader with preview of the uploaded image
     files: ['@UndfAngularJsBundle/Resources/public/js/undf/file_upload.js']
+
+  uRemainingTime:
+    description: Displays the remaining time with format "d H:i:s" form NOW until a given timestamp (assumed to be given in seconds)
+    files: ['@UndfAngularJsBundle/Resources/public/js/undf/remaining_time.js']
